@@ -21,7 +21,7 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  md_icons: any
+  mdi: any
     git: 
       path: https://github.com/m7mdra/md_icons/mdi
       ref: main
