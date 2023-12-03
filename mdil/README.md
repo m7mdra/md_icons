@@ -30,7 +30,7 @@ dependencies:
 ### Import the Package
 
 ```dart
-import 'package:md_icons/md_icons.dart';
+import 'package:mdil/mdil_icons.dart';
 
 // some where in your code
 
