@@ -1,39 +1,45 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# MDI - Material Design Icons
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Pub Version](https://img.shields.io/pub/v/md_icons)](https://pub.dev/packages/md_icons)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A comprehensive collection of Material Design-inspired icons for Flutter applications, offering a wide range of icons for various use cases.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Extensive Icon Collection**: Includes a vast library of icons following Material Design guidelines.
+- **Regular & Light Versions**: Provides both regular and light versions of icons for different design needs.
+- **Customizable Usage**: Easily integrate icons into your Flutter apps with simple `Icon` widgets.
+- **Regular Updates**: Regularly updated with new icons and improvements.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add the following line to your `pubspec.yaml` file:
 
-## Usage
+> Note, icons are accessible only throught github
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+```yaml
+dependencies:
+  md_icons: any
+    git: 
+      path: https://github.com/m7mdra/md_icons/mdi
+      ref: main
+```
+# Usage
+### Import the Package
 
 ```dart
-const like = 'sample';
+import 'package:md_icons/md_icons.dart';
+
+// some where in your code
+
+Icon(MDI.iconName);
+// or
+Icon(MDIcons.iconName); 
+// or
+Icon(MaterialDesignIcons.iconName); 
+
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+and thats it.
