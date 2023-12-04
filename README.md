@@ -1,6 +1,7 @@
 # md_icons
 The `md_icons` repository hosts a comprehensive collection of Material Design-inspired icons for Flutter applications. It consists of three projects, `mdi`, `mdil`, and an `example` project showcasing all available icons.
 
+icons for both `mdi` and `mdil` are taken from [materialdesignicons.com](https://materialdesignicons.com/)
 
 ## Module
 #### [mdi](https://github.com/m7mdra/md_icons/tree/main/mdi)
@@ -14,3 +15,4 @@ The mdil project houses the light or outline versions of icons, providing a subt
 The example project demonstrates how to utilize and display all available icons from both mdi and mdil. It serves as a reference for using these icons in Flutter applications and showcases their visual representations.
 
 Visit each module to learn more about usage.
+
