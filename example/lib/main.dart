@@ -127,8 +127,10 @@ class _MDICollectionState extends State<MDICollection>
         );
       },
       itemCount: mdiIcons.length,
-      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: widget.crossAxisCount, crossAxisSpacing: 8, mainAxisSpacing: 8),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: widget.crossAxisCount,
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8),
     );
   }
 
@@ -184,8 +186,10 @@ class _MDILCollectionState extends State<MDILCollection>
         );
       },
       itemCount: mdiIcons.length,
-      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: widget.crossAxisCount, crossAxisSpacing: 8, mainAxisSpacing: 8),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: widget.crossAxisCount,
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8),
     );
   }
 
@@ -219,7 +223,7 @@ class IconViewer extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        maxLines: 1,
+                        maxLines: 3,
                         style: Theme.of(context).textTheme.titleLarge,
                         textAlign: TextAlign.center,
                       ),
