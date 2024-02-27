@@ -9,6 +9,9 @@
       <excludeFolder url="file://$MODULE_DIR$/mdi/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/mdi/build" />
       <excludeFolder url="file://$MODULE_DIR$/mdi/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/web/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/web/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/web/build" />
       <excludeFolder url="file://$MODULE_DIR$/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/example/build" />

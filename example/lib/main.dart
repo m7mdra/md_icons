@@ -1,5 +1,6 @@
 import 'package:example/all_mdil_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:markdown_viewer/markdown_viewer.dart';
 import 'package:mdi/mdi.dart';
 import 'package:mdil/mdil_icons.dart';
 
@@ -9,6 +10,8 @@ void main() {
   runApp(const MyApp());
 }
 
+//
+//
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         useMaterial3: true,
       ),
       home: const MyHomePage(),
@@ -37,9 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
   int _page = 0;
   final _pageController = PageController();
 
+  final _globalKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _globalKey,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _page,
         items: const [
@@ -55,25 +61,27 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text("MDL Icons"),
       ),
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          final double screenWidth = constraints.maxWidth;
-          const double itemWidth = 100;
-          final int crossAxisCount = (screenWidth / itemWidth).floor();
+      body: SafeArea(
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            final double screenWidth = constraints.maxWidth;
+            const double itemWidth = 100;
+            final int crossAxisCount = (screenWidth / itemWidth).floor();
 
-          return PageView(
-            controller: _pageController,
-            onPageChanged: (newPage) {
-              setState(() {
-                _page = newPage;
-              });
-            },
-            children: [
-              MDICollection(crossAxisCount: crossAxisCount),
-              MDILCollection(crossAxisCount: crossAxisCount)
-            ],
-          );
-        },
+            return PageView(
+              controller: _pageController,
+              onPageChanged: (newPage) {
+                setState(() {
+                  _page = newPage;
+                });
+              },
+              children: [
+                MDICollection(crossAxisCount: crossAxisCount),
+                MDILCollection(crossAxisCount: crossAxisCount)
+              ],
+            );
+          },
+        ),
       ),
     );
   }
@@ -93,44 +101,57 @@ class _MDICollectionState extends State<MDICollection>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return GridView.builder(
-      padding: const EdgeInsets.all(16),
-      itemBuilder: (context, index) {
-        var borderRadius = BorderRadius.circular(8);
-        var name = mdiIconsNames[index];
-        var icon = mdiIcons[index];
-        return Hero(
-          tag: name,
-          child: Card(
+    var scrollController = ScrollController();
+    return Scrollbar(
+      controller: scrollController,
+      child: GridView.builder(
+        controller: scrollController,
+        padding: const EdgeInsets.all(16),
+        itemBuilder: (context, index) {
+          var borderRadius = BorderRadius.circular(8);
+          var name = mdiIconsNames[index];
+          var icon = mdiIcons[index];
+          return Card(
             shape: RoundedRectangleBorder(borderRadius: borderRadius),
             margin: EdgeInsets.zero,
             child: InkWell(
               borderRadius: borderRadius,
               onTap: () {
-                Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                        pageBuilder: (context, _, __) =>
-                            IconViewer(icon: icon, name: name),
-                        opaque: false));
+                showModalBottomSheet(
+                    isScrollControlled: true,
+                    context: context,
+                    builder: (context) => IconViewer(
+                          icon: icon,
+                          name: name,
+                        ));
               },
               child: GridTile(
-                footer: Text(
-                  name,
-                  maxLines: 1,
+                header: Text(
+                  (index + 1).toString(),
                   textAlign: TextAlign.center,
                 ),
-                child: Icon(icon),
+                footer: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    name,
+                    maxLines: 1,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                child: Icon(
+                  icon,
+                  size: 40,
+                ),
               ),
             ),
-          ),
-        );
-      },
-      itemCount: mdiIcons.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: widget.crossAxisCount,
-          crossAxisSpacing: 8,
-          mainAxisSpacing: 8),
+          );
+        },
+        itemCount: mdiIcons.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: widget.crossAxisCount,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8),
+      ),
     );
   }
 
@@ -152,44 +173,58 @@ class _MDILCollectionState extends State<MDILCollection>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return GridView.builder(
-      padding: const EdgeInsets.all(16),
-      itemBuilder: (context, index) {
-        var borderRadius = BorderRadius.circular(8);
-        var name = mdilIconsNames[index];
-        var icon = mdilIcons[index];
-        return Hero(
-          tag: name,
-          child: Card(
+    var scrollController = ScrollController();
+    return Scrollbar(
+      controller: scrollController,
+      child: GridView.builder(
+        controller: scrollController,
+        padding: const EdgeInsets.all(16),
+        itemBuilder: (context, index) {
+          var borderRadius = BorderRadius.circular(8);
+          var name = mdilIconsNames[index];
+          var icon = mdilIcons[index];
+          return Card(
             shape: RoundedRectangleBorder(borderRadius: borderRadius),
             margin: EdgeInsets.zero,
             child: InkWell(
               borderRadius: borderRadius,
               onTap: () {
-                Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                        pageBuilder: (context, _, __) =>
-                            IconViewer(icon: icon, name: name),
-                        opaque: false));
+                showModalBottomSheet(
+                    isScrollControlled: true,
+                    context: context,
+                    builder: (context) => IconViewer(
+                          icon: icon,
+                          name: name,
+                          mdi: false,
+                        ));
               },
               child: GridTile(
-                footer: Text(
-                  name,
-                  maxLines: 1,
+                header: Text(
+                  (index + 1).toString(),
                   textAlign: TextAlign.center,
                 ),
-                child: Icon(icon),
+                footer: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    name,
+                    maxLines: 1,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                child: Icon(
+                  icon,
+                  size: 40,
+                ),
               ),
             ),
-          ),
-        );
-      },
-      itemCount: mdiIcons.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: widget.crossAxisCount,
-          crossAxisSpacing: 8,
-          mainAxisSpacing: 8),
+          );
+        },
+        itemCount: mdilIcons.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: widget.crossAxisCount,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8),
+      ),
     );
   }
 
@@ -200,46 +235,100 @@ class _MDILCollectionState extends State<MDILCollection>
 class IconViewer extends StatelessWidget {
   final IconData icon;
   final String name;
+  final bool mdi;
 
-  const IconViewer({super.key, required this.icon, required this.name});
+  const IconViewer({
+    super.key,
+    required this.icon,
+    required this.name,
+    this.mdi = true,
+  });
 
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
     return GestureDetector(
       onTap: () {
         Navigator.pop(context);
       },
-      child: Material(
-        color: Colors.black26,
-        child: Center(
-          child: Hero(
-            tag: name,
-            child: Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        name,
-                        maxLines: 3,
-                        style: Theme.of(context).textTheme.titleLarge,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(icon
-                          .toString()
-                          .replaceAll('IconData', '')
-                          .replaceAll('(', '')
-                          .replaceAll(')', '')),
-                      const SizedBox(height: 16),
-                      Icon(icon, size: 45),
-                      const SizedBox(height: 16),
-                    ],
-                  ),
-                ),
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, size: 50),
+              const SizedBox(height: 8),
+              Text(
+                name,
+                maxLines: 3,
+                style: textTheme.titleLarge,
+                textAlign: TextAlign.center,
               ),
-            ),
+              const SizedBox(height: 4),
+              Text(
+                icon
+                    .toString()
+                    .replaceAll('IconData', '')
+                    .replaceAll('(', '')
+                    .replaceAll(')', ''),
+                style: textTheme.labelSmall,
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Usage: ',
+                style:
+                    textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
+              ),
+              if (mdi)
+                Column(
+                  children: [
+                    MarkdownViewer('''```
+Icon(MDI.$name);'''),
+                    const SizedBox(height: 4),
+                    Text(
+                      'OR',
+                      style: textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 4),
+                    MarkdownViewer('''```
+Icon(MDIcons.$name);'''),
+                    const SizedBox(height: 4),
+                    Text(
+                      'OR',
+                      style: textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 4),
+                    MarkdownViewer('''```
+Icon(MaterialDesignIconsLight.$name);'''),
+                  ],
+                )
+              else
+                Column(
+                  children: [
+                    MarkdownViewer('''```
+Icon(MDIL.$name);'''),
+                    const SizedBox(height: 4),
+                    Text(
+                      'OR',
+                      style: textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 4),
+                    MarkdownViewer('''```
+Icon(MDILight.$name);'''),
+                    const SizedBox(height: 4),
+                    Text(
+                      'OR',
+                      style: textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 4),
+                    MarkdownViewer('''```
+Icon(MaterialDesignIconsLight.$name);'''),
+                  ],
+                ),
+              const SizedBox(height: 32)
+            ],
           ),
         ),
       ),
