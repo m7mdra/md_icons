@@ -1,6 +1,6 @@
 import 'package:example/all_mdil_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:markdown_viewer/markdown_viewer.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:mdi/mdi.dart';
 import 'package:mdil/mdil_icons.dart';
 
@@ -120,9 +120,10 @@ class _MDICollectionState extends State<MDICollection>
                 showModalBottomSheet(
                     isScrollControlled: true,
                     context: context,
-                    builder: (context) => IconViewer(
+                    builder: (context) => IconViewerModal(
                           icon: icon,
                           name: name,
+                          mdi: true,
                         ));
               },
               child: GridTile(
@@ -192,7 +193,7 @@ class _MDILCollectionState extends State<MDILCollection>
                 showModalBottomSheet(
                     isScrollControlled: true,
                     context: context,
-                    builder: (context) => IconViewer(
+                    builder: (context) => IconViewerModal(
                           icon: icon,
                           name: name,
                           mdi: false,
@@ -232,12 +233,12 @@ class _MDILCollectionState extends State<MDILCollection>
   bool get wantKeepAlive => true;
 }
 
-class IconViewer extends StatelessWidget {
+class IconViewerModal extends StatelessWidget {
   final IconData icon;
   final String name;
   final bool mdi;
 
-  const IconViewer({
+  const IconViewerModal({
     super.key,
     required this.icon,
     required this.name,
@@ -284,47 +285,50 @@ class IconViewer extends StatelessWidget {
               if (mdi)
                 Column(
                   children: [
-                    MarkdownViewer('''```
-Icon(MDI.$name);'''),
+                    Markdown(data: '''```
+Icon(MDI.$name);''', shrinkWrap: true),
                     const SizedBox(height: 4),
                     Text(
                       'OR',
                       style: textTheme.bodySmall,
                     ),
                     const SizedBox(height: 4),
-                    MarkdownViewer('''```
-Icon(MDIcons.$name);'''),
+                    Markdown(data: '''```
+Icon(MDIcons.$name);''', shrinkWrap: true),
                     const SizedBox(height: 4),
                     Text(
                       'OR',
                       style: textTheme.bodySmall,
                     ),
                     const SizedBox(height: 4),
-                    MarkdownViewer('''```
-Icon(MaterialDesignIconsLight.$name);'''),
+                    Markdown(data: '''```
+Icon(MaterialDesignIconsLight.$name);''', shrinkWrap: true),
                   ],
                 )
               else
                 Column(
                   children: [
-                    MarkdownViewer('''```
-Icon(MDIL.$name);'''),
+                    Markdown(
+                      data: '''```
+Icon(MDIL.$name);''',
+                      shrinkWrap: true,
+                    ),
                     const SizedBox(height: 4),
                     Text(
                       'OR',
                       style: textTheme.bodySmall,
                     ),
                     const SizedBox(height: 4),
-                    MarkdownViewer('''```
-Icon(MDILight.$name);'''),
+                    Markdown(data: '''```
+Icon(MDILight.$name);''', shrinkWrap: true),
                     const SizedBox(height: 4),
                     Text(
                       'OR',
                       style: textTheme.bodySmall,
                     ),
                     const SizedBox(height: 4),
-                    MarkdownViewer('''```
-Icon(MaterialDesignIconsLight.$name);'''),
+                    Markdown(data: '''```
+Icon(MaterialDesignIconsLight.$name);''', shrinkWrap: true),
                   ],
                 ),
               const SizedBox(height: 32)
