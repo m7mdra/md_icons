@@ -1,6 +1,6 @@
 library mdil;
 
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 const _font = 'Material Design Icons Light';
 const _package = 'mdil';
@@ -8,527 +8,275 @@ const _package = 'mdil';
 typedef MDIL = MaterialDesignIconsLight;
 typedef MDILight = MaterialDesignIconsLight;
 
+class _MaterialDesignIconLight extends IconData {
+  const _MaterialDesignIconLight(int codePoint)
+      : super(codePoint, fontFamily: _font, fontPackage: _package);
+}
+
 class MaterialDesignIconsLight {
   const MaterialDesignIconsLight._();
 
-  static const account =
-      IconData(0xF004, fontFamily: _font, fontPackage: _package);
-  static const alarm =
-      IconData(0xF020, fontFamily: _font, fontPackage: _package);
-  static const alarmPlus =
-      IconData(0xF024, fontFamily: _font, fontPackage: _package);
-  static const alert =
-      IconData(0xF026, fontFamily: _font, fontPackage: _package);
-  static const alertCircle =
-      IconData(0xF028, fontFamily: _font, fontPackage: _package);
-  static const alertOctagon =
-      IconData(0xF029, fontFamily: _font, fontPackage: _package);
-  static const arrangeBringForward =
-      IconData(0xF03D, fontFamily: _font, fontPackage: _package);
-  static const arrangeBringToFront =
-      IconData(0xF03E, fontFamily: _font, fontPackage: _package);
-  static const arrangeSendBackward =
-      IconData(0xF03F, fontFamily: _font, fontPackage: _package);
-  static const arrangeSendToBack =
-      IconData(0xF040, fontFamily: _font, fontPackage: _package);
-  static const arrowDown =
-      IconData(0xF045, fontFamily: _font, fontPackage: _package);
-  static const arrowDownCircle =
-      IconData(0xFCB7, fontFamily: _font, fontPackage: _package);
-  static const arrowLeft =
-      IconData(0xF04D, fontFamily: _font, fontPackage: _package);
-  static const arrowLeftCircle =
-      IconData(0xFCB9, fontFamily: _font, fontPackage: _package);
-  static const arrowRight =
-      IconData(0xF054, fontFamily: _font, fontPackage: _package);
-  static const arrowRightCircle =
-      IconData(0xFCBB, fontFamily: _font, fontPackage: _package);
-  static const arrowUp =
-      IconData(0xF05D, fontFamily: _font, fontPackage: _package);
-  static const arrowUpCircle =
-      IconData(0xFCBD, fontFamily: _font, fontPackage: _package);
-  static const bank =
-      IconData(0xF070, fontFamily: _font, fontPackage: _package);
-  static const bell =
-      IconData(0xF09A, fontFamily: _font, fontPackage: _package);
-  static const bellOff =
-      IconData(0xF09B, fontFamily: _font, fontPackage: _package);
-  static const bluetooth =
-      IconData(0xF0AF, fontFamily: _font, fontPackage: _package);
-  static const book =
-      IconData(0xF0BA, fontFamily: _font, fontPackage: _package);
-  static const bookMultiple =
-      IconData(0xF0BB, fontFamily: _font, fontPackage: _package);
-  static const bookPlus =
-      IconData(0xF5DB, fontFamily: _font, fontPackage: _package);
-  static const bookmark =
-      IconData(0xF0C0, fontFamily: _font, fontPackage: _package);
-  static const borderAll =
-      IconData(0xF0C7, fontFamily: _font, fontPackage: _package);
-  static const borderBottom =
-      IconData(0xF0C8, fontFamily: _font, fontPackage: _package);
-  static const borderHorizontal =
-      IconData(0xF0CA, fontFamily: _font, fontPackage: _package);
-  static const borderInside =
-      IconData(0xF0CB, fontFamily: _font, fontPackage: _package);
-  static const borderLeft =
-      IconData(0xF0CC, fontFamily: _font, fontPackage: _package);
-  static const borderNone =
-      IconData(0xF0CD, fontFamily: _font, fontPackage: _package);
-  static const borderOutside =
-      IconData(0xF0CE, fontFamily: _font, fontPackage: _package);
-  static const borderRight =
-      IconData(0xF0CF, fontFamily: _font, fontPackage: _package);
-  static const borderTop =
-      IconData(0xF0D1, fontFamily: _font, fontPackage: _package);
-  static const borderVertical =
-      IconData(0xF0D2, fontFamily: _font, fontPackage: _package);
-  static const briefcase =
-      IconData(0xF0D6, fontFamily: _font, fontPackage: _package);
-  static const calendar =
-      IconData(0xF0ED, fontFamily: _font, fontPackage: _package);
-  static const camcorder =
-      IconData(0xF0FC, fontFamily: _font, fontPackage: _package);
-  static const camera =
-      IconData(0xF100, fontFamily: _font, fontPackage: _package);
-  static const cancel =
-      IconData(0xF739, fontFamily: _font, fontPackage: _package);
-  static const cart =
-      IconData(0xF110, fontFamily: _font, fontPackage: _package);
-  static const chartAreaspline =
-      IconData(0xF127, fontFamily: _font, fontPackage: _package);
-  static const chartBar =
-      IconData(0xF128, fontFamily: _font, fontPackage: _package);
-  static const chartHistogram =
-      IconData(0xF129, fontFamily: _font, fontPackage: _package);
-  static const chartLine =
-      IconData(0xF12A, fontFamily: _font, fontPackage: _package);
-  static const chartPie =
-      IconData(0xF12B, fontFamily: _font, fontPackage: _package);
-  static const check =
-      IconData(0xF12C, fontFamily: _font, fontPackage: _package);
-  static const chevronDoubleDown =
-      IconData(0xF13C, fontFamily: _font, fontPackage: _package);
-  static const chevronDoubleLeft =
-      IconData(0xF13D, fontFamily: _font, fontPackage: _package);
-  static const chevronDoubleRight =
-      IconData(0xF13E, fontFamily: _font, fontPackage: _package);
-  static const chevronDoubleUp =
-      IconData(0xF13F, fontFamily: _font, fontPackage: _package);
-  static const chevronDown =
-      IconData(0xF140, fontFamily: _font, fontPackage: _package);
-  static const chevronLeft =
-      IconData(0xF141, fontFamily: _font, fontPackage: _package);
-  static const chevronRight =
-      IconData(0xF142, fontFamily: _font, fontPackage: _package);
-  static const chevronUp =
-      IconData(0xF143, fontFamily: _font, fontPackage: _package);
-  static const circle =
-      IconData(0xF764, fontFamily: _font, fontPackage: _package);
-  static const clipboard =
-      IconData(0xF147, fontFamily: _font, fontPackage: _package);
-  static const clipboardCheck =
-      IconData(0xF14C, fontFamily: _font, fontPackage: _package);
-  static const clipboardPlus =
-      IconData(0xF750, fontFamily: _font, fontPackage: _package);
-  static const clipboardText =
-      IconData(0xF14E, fontFamily: _font, fontPackage: _package);
-  static const clock =
-      IconData(0xF150, fontFamily: _font, fontPackage: _package);
-  static const closedCaption =
-      IconData(0xF15E, fontFamily: _font, fontPackage: _package);
-  static const cloud =
-      IconData(0xF15F, fontFamily: _font, fontPackage: _package);
-  static const cloudDownload =
-      IconData(0xF162, fontFamily: _font, fontPackage: _package);
-  static const cloudUpload =
-      IconData(0xF167, fontFamily: _font, fontPackage: _package);
-  static const comment =
-      IconData(0xF17A, fontFamily: _font, fontPackage: _package);
-  static const commentAlert =
-      IconData(0xF17D, fontFamily: _font, fontPackage: _package);
-  static const commentText =
-      IconData(0xF188, fontFamily: _font, fontPackage: _package);
-  static const console =
-      IconData(0xF18D, fontFamily: _font, fontPackage: _package);
-  static const contentCut =
-      IconData(0xF190, fontFamily: _font, fontPackage: _package);
-  static const contentDuplicate =
-      IconData(0xF191, fontFamily: _font, fontPackage: _package);
-  static const contentPaste =
-      IconData(0xF192, fontFamily: _font, fontPackage: _package);
-  static const contentSave =
-      IconData(0xF193, fontFamily: _font, fontPackage: _package);
-  static const contentSaveAll =
-      IconData(0xF194, fontFamily: _font, fontPackage: _package);
-  static const creditCard =
-      IconData(0xF19B, fontFamily: _font, fontPackage: _package);
-  static const creditCardScan =
-      IconData(0xF19D, fontFamily: _font, fontPackage: _package);
-  static const crop =
-      IconData(0xF19E, fontFamily: _font, fontPackage: _package);
-  static const cropFree =
-      IconData(0xF19F, fontFamily: _font, fontPackage: _package);
-  static const currencyEur =
-      IconData(0xF1AD, fontFamily: _font, fontPackage: _package);
-  static const currencyGbp =
-      IconData(0xF1AE, fontFamily: _font, fontPackage: _package);
-  static const currencyRub =
-      IconData(0xF1B1, fontFamily: _font, fontPackage: _package);
-  static const currencyUsd =
-      IconData(0xF1B3, fontFamily: _font, fontPackage: _package);
-  static const delete =
-      IconData(0xF1C0, fontFamily: _font, fontPackage: _package);
-  static const diamondStone =
-      IconData(0xF1C8, fontFamily: _font, fontPackage: _package);
-  static const dotsHorizontal =
-      IconData(0xF1D8, fontFamily: _font, fontPackage: _package);
-  static const dotsVertical =
-      IconData(0xF1D9, fontFamily: _font, fontPackage: _package);
-  static const download =
-      IconData(0xF1DA, fontFamily: _font, fontPackage: _package);
-  static const eject =
-      IconData(0xF1EA, fontFamily: _font, fontPackage: _package);
-  static const email =
-      IconData(0xF1EE, fontFamily: _font, fontPackage: _package);
-  static const emailOpen =
-      IconData(0xF1EF, fontFamily: _font, fontPackage: _package);
-  static const eye = IconData(0xF208, fontFamily: _font, fontPackage: _package);
-  static const eyeOff =
-      IconData(0xF209, fontFamily: _font, fontPackage: _package);
-  static const factory =
-      IconData(0xF20F, fontFamily: _font, fontPackage: _package);
-  static const fastForward =
-      IconData(0xF211, fontFamily: _font, fontPackage: _package);
-  static const file =
-      IconData(0xF214, fontFamily: _font, fontPackage: _package);
-  static const fileMultiple =
-      IconData(0xF222, fontFamily: _font, fontPackage: _package);
-  static const filePlus =
-      IconData(0xF751, fontFamily: _font, fontPackage: _package);
-  static const flag =
-      IconData(0xF23B, fontFamily: _font, fontPackage: _package);
-  static const flash =
-      IconData(0xF241, fontFamily: _font, fontPackage: _package);
-  static const flask =
-      IconData(0xF093, fontFamily: _font, fontPackage: _package);
-  static const flaskEmpty =
-      IconData(0xF094, fontFamily: _font, fontPackage: _package);
-  static const folder =
-      IconData(0xF24B, fontFamily: _font, fontPackage: _package);
-  static const folderMultiple =
-      IconData(0xF253, fontFamily: _font, fontPackage: _package);
-  static const folderPlus =
-      IconData(0xF257, fontFamily: _font, fontPackage: _package);
-  static const formatAlignBottom =
-      IconData(0xF752, fontFamily: _font, fontPackage: _package);
-  static const formatAlignCenter =
-      IconData(0xF260, fontFamily: _font, fontPackage: _package);
-  static const formatAlignJustify =
-      IconData(0xF261, fontFamily: _font, fontPackage: _package);
-  static const formatAlignLeft =
-      IconData(0xF262, fontFamily: _font, fontPackage: _package);
-  static const formatAlignMiddle =
-      IconData(0xF753, fontFamily: _font, fontPackage: _package);
-  static const formatAlignRight =
-      IconData(0xF263, fontFamily: _font, fontPackage: _package);
-  static const formatAlignTop =
-      IconData(0xF754, fontFamily: _font, fontPackage: _package);
-  static const formatBold =
-      IconData(0xF264, fontFamily: _font, fontPackage: _package);
-  static const formatClear =
-      IconData(0xF265, fontFamily: _font, fontPackage: _package);
-  static const formatFloatCenter =
-      IconData(0xF267, fontFamily: _font, fontPackage: _package);
-  static const formatFloatLeft =
-      IconData(0xF268, fontFamily: _font, fontPackage: _package);
-  static const formatFloatNone =
-      IconData(0xF269, fontFamily: _font, fontPackage: _package);
-  static const formatFloatRight =
-      IconData(0xF26A, fontFamily: _font, fontPackage: _package);
-  static const formatIndentDecrease =
-      IconData(0xF275, fontFamily: _font, fontPackage: _package);
-  static const formatIndentIncrease =
-      IconData(0xF276, fontFamily: _font, fontPackage: _package);
-  static const formatItalic =
-      IconData(0xF277, fontFamily: _font, fontPackage: _package);
-  static const formatLineSpacing =
-      IconData(0xF278, fontFamily: _font, fontPackage: _package);
-  static const formatListBulleted =
-      IconData(0xF279, fontFamily: _font, fontPackage: _package);
-  static const formatListChecks =
-      IconData(0xF755, fontFamily: _font, fontPackage: _package);
-  static const formatListNumbers =
-      IconData(0xF27B, fontFamily: _font, fontPackage: _package);
-  static const formatQuoteClose =
-      IconData(0xF27E, fontFamily: _font, fontPackage: _package);
-  static const formatQuoteOpen =
-      IconData(0xF756, fontFamily: _font, fontPackage: _package);
-  static const formatUnderline =
-      IconData(0xF287, fontFamily: _font, fontPackage: _package);
-  static const formatWrapInline =
-      IconData(0xF288, fontFamily: _font, fontPackage: _package);
-  static const formatWrapSquare =
-      IconData(0xF289, fontFamily: _font, fontPackage: _package);
-  static const formatWrapTight =
-      IconData(0xF28A, fontFamily: _font, fontPackage: _package);
-  static const formatWrapTopBottom =
-      IconData(0xF28B, fontFamily: _font, fontPackage: _package);
-  static const forum =
-      IconData(0xF28C, fontFamily: _font, fontPackage: _package);
-  static const fullscreen =
-      IconData(0xF293, fontFamily: _font, fontPackage: _package);
-  static const fullscreenExit =
-      IconData(0xF294, fontFamily: _font, fontPackage: _package);
-  static const gift =
-      IconData(0xF2A1, fontFamily: _font, fontPackage: _package);
-  static const grid =
-      IconData(0xF2C1, fontFamily: _font, fontPackage: _package);
-  static const gridLarge =
-      IconData(0xF757, fontFamily: _font, fontPackage: _package);
-  static const gridOff =
-      IconData(0xF2C2, fontFamily: _font, fontPackage: _package);
-  static const group =
-      IconData(0xF2C3, fontFamily: _font, fontPackage: _package);
-  static const hamburger =
-      IconData(0xF684, fontFamily: _font, fontPackage: _package);
-  static const heart =
-      IconData(0xF2D1, fontFamily: _font, fontPackage: _package);
-  static const heartHalf =
-      IconData(0xF6DE, fontFamily: _font, fontPackage: _package);
-  static const heartOff =
-      IconData(0xF758, fontFamily: _font, fontPackage: _package);
-  static const help =
-      IconData(0xF2D6, fontFamily: _font, fontPackage: _package);
-  static const helpCircle =
-      IconData(0xF2D7, fontFamily: _font, fontPackage: _package);
-  static const hexagon =
-      IconData(0xF2D8, fontFamily: _font, fontPackage: _package);
-  static const home =
-      IconData(0xF2DC, fontFamily: _font, fontPackage: _package);
-  static const image =
-      IconData(0xF2E9, fontFamily: _font, fontPackage: _package);
-  static const inbox =
-      IconData(0xF686, fontFamily: _font, fontPackage: _package);
-  static const information =
-      IconData(0xF2FC, fontFamily: _font, fontPackage: _package);
-  static const label =
-      IconData(0xF315, fontFamily: _font, fontPackage: _package);
-  static const layers =
-      IconData(0xF328, fontFamily: _font, fontPackage: _package);
-  static const lightbulb =
-      IconData(0xF335, fontFamily: _font, fontPackage: _package);
-  static const lightbulbOn =
-      IconData(0xF6E7, fontFamily: _font, fontPackage: _package);
-  static const link =
-      IconData(0xF337, fontFamily: _font, fontPackage: _package);
-  static const linkVariant =
-      IconData(0xF339, fontFamily: _font, fontPackage: _package);
-  static const lock =
-      IconData(0xF33E, fontFamily: _font, fontPackage: _package);
-  static const lockOpen =
-      IconData(0xF33F, fontFamily: _font, fontPackage: _package);
-  static const login =
-      IconData(0xF342, fontFamily: _font, fontPackage: _package);
-  static const logout =
-      IconData(0xF343, fontFamily: _font, fontPackage: _package);
-  static const magnify =
-      IconData(0xF349, fontFamily: _font, fontPackage: _package);
-  static const magnifyMinus =
-      IconData(0xF34A, fontFamily: _font, fontPackage: _package);
-  static const magnifyPlus =
-      IconData(0xF34B, fontFamily: _font, fontPackage: _package);
-  static const mapMarker =
-      IconData(0xF34E, fontFamily: _font, fontPackage: _package);
-  static const memory =
-      IconData(0xF35B, fontFamily: _font, fontPackage: _package);
-  static const menu =
-      IconData(0xF35C, fontFamily: _font, fontPackage: _package);
-  static const message =
-      IconData(0xF361, fontFamily: _font, fontPackage: _package);
-  static const messageAlert =
-      IconData(0xF362, fontFamily: _font, fontPackage: _package);
-  static const messageImage =
-      IconData(0xF364, fontFamily: _font, fontPackage: _package);
-  static const messageProcessing =
-      IconData(0xF366, fontFamily: _font, fontPackage: _package);
-  static const messageReply =
-      IconData(0xF367, fontFamily: _font, fontPackage: _package);
-  static const messageText =
-      IconData(0xF369, fontFamily: _font, fontPackage: _package);
-  static const messageVideo =
-      IconData(0xF36B, fontFamily: _font, fontPackage: _package);
-  static const microphone =
-      IconData(0xF36C, fontFamily: _font, fontPackage: _package);
-  static const microphoneOff =
-      IconData(0xF36D, fontFamily: _font, fontPackage: _package);
-  static const minus =
-      IconData(0xF374, fontFamily: _font, fontPackage: _package);
-  static const minusBox =
-      IconData(0xF375, fontFamily: _font, fontPackage: _package);
-  static const minusCircle =
-      IconData(0xF376, fontFamily: _font, fontPackage: _package);
-  static const monitor =
-      IconData(0xF379, fontFamily: _font, fontPackage: _package);
-  static const monitorMultiple =
-      IconData(0xF37A, fontFamily: _font, fontPackage: _package);
-  static const music =
-      IconData(0xF759, fontFamily: _font, fontPackage: _package);
-  static const musicOff =
-      IconData(0xF75A, fontFamily: _font, fontPackage: _package);
-  static const nfcVariant =
-      IconData(0xF398, fontFamily: _font, fontPackage: _package);
-  static const note =
-      IconData(0xF39A, fontFamily: _font, fontPackage: _package);
-  static const noteMultiple =
-      IconData(0xF6B7, fontFamily: _font, fontPackage: _package);
-  static const notePlus =
-      IconData(0xF39C, fontFamily: _font, fontPackage: _package);
-  static const noteText =
-      IconData(0xF39E, fontFamily: _font, fontPackage: _package);
-  static const octagon =
-      IconData(0xF3C3, fontFamily: _font, fontPackage: _package);
-  static const paperclip =
-      IconData(0xF3E2, fontFamily: _font, fontPackage: _package);
-  static const pause =
-      IconData(0xF3E4, fontFamily: _font, fontPackage: _package);
-  static const pencil =
-      IconData(0xF3EB, fontFamily: _font, fontPackage: _package);
-  static const phone =
-      IconData(0xF3F2, fontFamily: _font, fontPackage: _package);
-  static const pin = IconData(0xF403, fontFamily: _font, fontPackage: _package);
-  static const pinOff =
-      IconData(0xF404, fontFamily: _font, fontPackage: _package);
-  static const play =
-      IconData(0xF40A, fontFamily: _font, fontPackage: _package);
-  static const plus =
-      IconData(0xF415, fontFamily: _font, fontPackage: _package);
-  static const plusBox =
-      IconData(0xF416, fontFamily: _font, fontPackage: _package);
-  static const plusCircle =
-      IconData(0xF417, fontFamily: _font, fontPackage: _package);
-  static const power =
-      IconData(0xF425, fontFamily: _font, fontPackage: _package);
-  static const presentation =
-      IconData(0xF428, fontFamily: _font, fontPackage: _package);
-  static const presentationPlay =
-      IconData(0xF429, fontFamily: _font, fontPackage: _package);
-  static const printer =
-      IconData(0xF42A, fontFamily: _font, fontPackage: _package);
-  static const redoVariant =
-      IconData(0xF44F, fontFamily: _font, fontPackage: _package);
-  static const refresh =
-      IconData(0xF450, fontFamily: _font, fontPackage: _package);
-  static const repeat =
-      IconData(0xF456, fontFamily: _font, fontPackage: _package);
-  static const repeatOff =
-      IconData(0xF457, fontFamily: _font, fontPackage: _package);
-  static const repeatOnce =
-      IconData(0xF458, fontFamily: _font, fontPackage: _package);
-  static const rewind =
-      IconData(0xF45F, fontFamily: _font, fontPackage: _package);
-  static const rhombus =
-      IconData(0xF70A, fontFamily: _font, fontPackage: _package);
-  static const rss = IconData(0xF46B, fontFamily: _font, fontPackage: _package);
-  static const script =
-      IconData(0xF478, fontFamily: _font, fontPackage: _package);
-  static const settings =
-      IconData(0xF493, fontFamily: _font, fontPackage: _package);
-  static const shield =
-      IconData(0xF498, fontFamily: _font, fontPackage: _package);
-  static const shuffle =
-      IconData(0xF49D, fontFamily: _font, fontPackage: _package);
-  static const signal =
-      IconData(0xF4A2, fontFamily: _font, fontPackage: _package);
-  static const sitemap =
-      IconData(0xF4AA, fontFamily: _font, fontPackage: _package);
-  static const skipNext =
-      IconData(0xF4AD, fontFamily: _font, fontPackage: _package);
-  static const skipPrevious =
-      IconData(0xF4AE, fontFamily: _font, fontPackage: _package);
-  static const sleep =
-      IconData(0xF4B2, fontFamily: _font, fontPackage: _package);
-  static const sleepOff =
-      IconData(0xF4B3, fontFamily: _font, fontPackage: _package);
-  static const spellcheck =
-      IconData(0xF4C6, fontFamily: _font, fontPackage: _package);
-  static const square =
-      IconData(0xF763, fontFamily: _font, fontPackage: _package);
-  static const star =
-      IconData(0xF4CE, fontFamily: _font, fontPackage: _package);
-  static const starHalf =
-      IconData(0xF4D0, fontFamily: _font, fontPackage: _package);
-  static const stop =
-      IconData(0xF4DB, fontFamily: _font, fontPackage: _package);
-  static const tab = IconData(0xF4E9, fontFamily: _font, fontPackage: _package);
-  static const tabPlus =
-      IconData(0xF75B, fontFamily: _font, fontPackage: _package);
-  static const table =
-      IconData(0xF4EB, fontFamily: _font, fontPackage: _package);
-  static const taco =
-      IconData(0xF761, fontFamily: _font, fontPackage: _package);
-  static const tag = IconData(0xF4F9, fontFamily: _font, fontPackage: _package);
-  static const television =
-      IconData(0xF502, fontFamily: _font, fontPackage: _package);
-  static const thumbDown =
-      IconData(0xF511, fontFamily: _font, fontPackage: _package);
-  static const thumbUp =
-      IconData(0xF513, fontFamily: _font, fontPackage: _package);
-  static const thumbsUpDown =
-      IconData(0xF515, fontFamily: _font, fontPackage: _package);
-  static const tooltip =
-      IconData(0xF523, fontFamily: _font, fontPackage: _package);
-  static const tooltipText =
-      IconData(0xF528, fontFamily: _font, fontPackage: _package);
-  static const triangle =
-      IconData(0xF536, fontFamily: _font, fontPackage: _package);
-  static const trophy =
-      IconData(0xF538, fontFamily: _font, fontPackage: _package);
-  static const undoVariant =
-      IconData(0xF54D, fontFamily: _font, fontPackage: _package);
-  static const unfoldLessHorizontal =
-      IconData(0xF54E, fontFamily: _font, fontPackage: _package);
-  static const unfoldLessVertical =
-      IconData(0xF75F, fontFamily: _font, fontPackage: _package);
-  static const unfoldMoreHorizontal =
-      IconData(0xF54F, fontFamily: _font, fontPackage: _package);
-  static const unfoldMoreVertical =
-      IconData(0xF760, fontFamily: _font, fontPackage: _package);
-  static const ungroup =
-      IconData(0xF550, fontFamily: _font, fontPackage: _package);
-  static const upload =
-      IconData(0xF552, fontFamily: _font, fontPackage: _package);
-  static const vectorArrangeAbove =
-      IconData(0xF554, fontFamily: _font, fontPackage: _package);
-  static const vectorArrangeBelow =
-      IconData(0xF555, fontFamily: _font, fontPackage: _package);
-  static const vectorCombine =
-      IconData(0xF558, fontFamily: _font, fontPackage: _package);
-  static const vectorDifference =
-      IconData(0xF55A, fontFamily: _font, fontPackage: _package);
-  static const vectorDifferenceAb =
-      IconData(0xF55B, fontFamily: _font, fontPackage: _package);
-  static const vectorDifferenceBa =
-      IconData(0xF55C, fontFamily: _font, fontPackage: _package);
-  static const vectorIntersection =
-      IconData(0xF55D, fontFamily: _font, fontPackage: _package);
-  static const vectorUnion =
-      IconData(0xF564, fontFamily: _font, fontPackage: _package);
-  static const viewDashboard =
-      IconData(0xF56E, fontFamily: _font, fontPackage: _package);
-  static const viewModule =
-      IconData(0xF573, fontFamily: _font, fontPackage: _package);
-  static const volumeHigh =
-      IconData(0xF57E, fontFamily: _font, fontPackage: _package);
-  static const volumeMinus =
-      IconData(0xF75D, fontFamily: _font, fontPackage: _package);
-  static const volumeMute =
-      IconData(0xF75E, fontFamily: _font, fontPackage: _package);
-  static const volumeOff =
-      IconData(0xF581, fontFamily: _font, fontPackage: _package);
-  static const volumePlus =
-      IconData(0xF75C, fontFamily: _font, fontPackage: _package);
-  static const wifi =
-      IconData(0xF5A9, fontFamily: _font, fontPackage: _package);
-  static const xml = IconData(0xF5C0, fontFamily: _font, fontPackage: _package);
+  static const account = _MaterialDesignIconLight(0xF004);
+  static const alarm = _MaterialDesignIconLight(0xF020);
+  static const alarmPlus = _MaterialDesignIconLight(0xF024);
+  static const alert = _MaterialDesignIconLight(0xF026);
+  static const alertCircle = _MaterialDesignIconLight(0xF028);
+  static const alertOctagon = _MaterialDesignIconLight(0xF029);
+  static const arrangeBringForward = _MaterialDesignIconLight(0xF03D);
+  static const arrangeBringToFront = _MaterialDesignIconLight(0xF03E);
+  static const arrangeSendBackward = _MaterialDesignIconLight(0xF03F);
+  static const arrangeSendToBack = _MaterialDesignIconLight(0xF040);
+  static const arrowDown = _MaterialDesignIconLight(0xF045);
+  static const arrowDownCircle = _MaterialDesignIconLight(0xFCB7);
+  static const arrowLeft = _MaterialDesignIconLight(0xF04D);
+  static const arrowLeftCircle = _MaterialDesignIconLight(0xFCB9);
+  static const arrowRight = _MaterialDesignIconLight(0xF054);
+  static const arrowRightCircle = _MaterialDesignIconLight(0xFCBB);
+  static const arrowUp = _MaterialDesignIconLight(0xF05D);
+  static const arrowUpCircle = _MaterialDesignIconLight(0xFCBD);
+  static const bank = _MaterialDesignIconLight(0xF070);
+  static const bell = _MaterialDesignIconLight(0xF09A);
+  static const bellOff = _MaterialDesignIconLight(0xF09B);
+  static const bluetooth = _MaterialDesignIconLight(0xF0AF);
+  static const book = _MaterialDesignIconLight(0xF0BA);
+  static const bookMultiple = _MaterialDesignIconLight(0xF0BB);
+  static const bookPlus = _MaterialDesignIconLight(0xF5DB);
+  static const bookmark = _MaterialDesignIconLight(0xF0C0);
+  static const borderAll = _MaterialDesignIconLight(0xF0C7);
+  static const borderBottom = _MaterialDesignIconLight(0xF0C8);
+  static const borderHorizontal = _MaterialDesignIconLight(0xF0CA);
+  static const borderInside = _MaterialDesignIconLight(0xF0CB);
+  static const borderLeft = _MaterialDesignIconLight(0xF0CC);
+  static const borderNone = _MaterialDesignIconLight(0xF0CD);
+  static const borderOutside = _MaterialDesignIconLight(0xF0CE);
+  static const borderRight = _MaterialDesignIconLight(0xF0CF);
+  static const borderTop = _MaterialDesignIconLight(0xF0D1);
+  static const borderVertical = _MaterialDesignIconLight(0xF0D2);
+  static const briefcase = _MaterialDesignIconLight(0xF0D6);
+  static const calendar = _MaterialDesignIconLight(0xF0ED);
+  static const camcorder = _MaterialDesignIconLight(0xF0FC);
+  static const camera = _MaterialDesignIconLight(0xF100);
+  static const cancel = _MaterialDesignIconLight(0xF739);
+  static const cart = _MaterialDesignIconLight(0xF110);
+  static const chartAreaspline = _MaterialDesignIconLight(0xF127);
+  static const chartBar = _MaterialDesignIconLight(0xF128);
+  static const chartHistogram = _MaterialDesignIconLight(0xF129);
+  static const chartLine = _MaterialDesignIconLight(0xF12A);
+  static const chartPie = _MaterialDesignIconLight(0xF12B);
+  static const check = _MaterialDesignIconLight(0xF12C);
+  static const chevronDoubleDown = _MaterialDesignIconLight(0xF13C);
+  static const chevronDoubleLeft = _MaterialDesignIconLight(0xF13D);
+  static const chevronDoubleRight = _MaterialDesignIconLight(0xF13E);
+  static const chevronDoubleUp = _MaterialDesignIconLight(0xF13F);
+  static const chevronDown = _MaterialDesignIconLight(0xF140);
+  static const chevronLeft = _MaterialDesignIconLight(0xF141);
+  static const chevronRight = _MaterialDesignIconLight(0xF142);
+  static const chevronUp = _MaterialDesignIconLight(0xF143);
+  static const circle = _MaterialDesignIconLight(0xF764);
+  static const clipboard = _MaterialDesignIconLight(0xF147);
+  static const clipboardCheck = _MaterialDesignIconLight(0xF14C);
+  static const clipboardPlus = _MaterialDesignIconLight(0xF750);
+  static const clipboardText = _MaterialDesignIconLight(0xF14E);
+  static const clock = _MaterialDesignIconLight(0xF150);
+  static const closedCaption = _MaterialDesignIconLight(0xF15E);
+  static const cloud = _MaterialDesignIconLight(0xF15F);
+  static const cloudDownload = _MaterialDesignIconLight(0xF162);
+  static const cloudUpload = _MaterialDesignIconLight(0xF167);
+  static const comment = _MaterialDesignIconLight(0xF17A);
+  static const commentAlert = _MaterialDesignIconLight(0xF17D);
+  static const commentText = _MaterialDesignIconLight(0xF188);
+  static const console = _MaterialDesignIconLight(0xF18D);
+  static const contentCut = _MaterialDesignIconLight(0xF190);
+  static const contentDuplicate = _MaterialDesignIconLight(0xF191);
+  static const contentPaste = _MaterialDesignIconLight(0xF192);
+  static const contentSave = _MaterialDesignIconLight(0xF193);
+  static const contentSaveAll = _MaterialDesignIconLight(0xF194);
+  static const creditCard = _MaterialDesignIconLight(0xF19B);
+  static const creditCardScan = _MaterialDesignIconLight(0xF19D);
+  static const crop = _MaterialDesignIconLight(0xF19E);
+  static const cropFree = _MaterialDesignIconLight(0xF19F);
+  static const currencyEur = _MaterialDesignIconLight(0xF1AD);
+  static const currencyGbp = _MaterialDesignIconLight(0xF1AE);
+  static const currencyRub = _MaterialDesignIconLight(0xF1B1);
+  static const currencyUsd = _MaterialDesignIconLight(0xF1B3);
+  static const delete = _MaterialDesignIconLight(0xF1C0);
+  static const diamondStone = _MaterialDesignIconLight(0xF1C8);
+  static const dotsHorizontal = _MaterialDesignIconLight(0xF1D8);
+  static const dotsVertical = _MaterialDesignIconLight(0xF1D9);
+  static const download = _MaterialDesignIconLight(0xF1DA);
+  static const eject = _MaterialDesignIconLight(0xF1EA);
+  static const email = _MaterialDesignIconLight(0xF1EE);
+  static const emailOpen = _MaterialDesignIconLight(0xF1EF);
+  static const eye = _MaterialDesignIconLight(0xF208);
+  static const eyeOff = _MaterialDesignIconLight(0xF209);
+  static const factory = _MaterialDesignIconLight(0xF20F);
+  static const fastForward = _MaterialDesignIconLight(0xF211);
+  static const file = _MaterialDesignIconLight(0xF214);
+  static const fileMultiple = _MaterialDesignIconLight(0xF222);
+  static const filePlus = _MaterialDesignIconLight(0xF751);
+  static const flag = _MaterialDesignIconLight(0xF23B);
+  static const flash = _MaterialDesignIconLight(0xF241);
+  static const flask = _MaterialDesignIconLight(0xF093);
+  static const flaskEmpty = _MaterialDesignIconLight(0xF094);
+  static const folder = _MaterialDesignIconLight(0xF24B);
+  static const folderMultiple = _MaterialDesignIconLight(0xF253);
+  static const folderPlus = _MaterialDesignIconLight(0xF257);
+  static const formatAlignBottom = _MaterialDesignIconLight(0xF752);
+  static const formatAlignCenter = _MaterialDesignIconLight(0xF260);
+  static const formatAlignJustify = _MaterialDesignIconLight(0xF261);
+  static const formatAlignLeft = _MaterialDesignIconLight(0xF262);
+  static const formatAlignMiddle = _MaterialDesignIconLight(0xF753);
+  static const formatAlignRight = _MaterialDesignIconLight(0xF263);
+  static const formatAlignTop = _MaterialDesignIconLight(0xF754);
+  static const formatBold = _MaterialDesignIconLight(0xF264);
+  static const formatClear = _MaterialDesignIconLight(0xF265);
+  static const formatFloatCenter = _MaterialDesignIconLight(0xF267);
+  static const formatFloatLeft = _MaterialDesignIconLight(0xF268);
+  static const formatFloatNone = _MaterialDesignIconLight(0xF269);
+  static const formatFloatRight = _MaterialDesignIconLight(0xF26A);
+  static const formatIndentDecrease = _MaterialDesignIconLight(0xF275);
+  static const formatIndentIncrease = _MaterialDesignIconLight(0xF276);
+  static const formatItalic = _MaterialDesignIconLight(0xF277);
+  static const formatLineSpacing = _MaterialDesignIconLight(0xF278);
+  static const formatListBulleted = _MaterialDesignIconLight(0xF279);
+  static const formatListChecks = _MaterialDesignIconLight(0xF755);
+  static const formatListNumbers = _MaterialDesignIconLight(0xF27B);
+  static const formatQuoteClose = _MaterialDesignIconLight(0xF27E);
+  static const formatQuoteOpen = _MaterialDesignIconLight(0xF756);
+  static const formatUnderline = _MaterialDesignIconLight(0xF287);
+  static const formatWrapInline = _MaterialDesignIconLight(0xF288);
+  static const formatWrapSquare = _MaterialDesignIconLight(0xF289);
+  static const formatWrapTight = _MaterialDesignIconLight(0xF28A);
+  static const formatWrapTopBottom = _MaterialDesignIconLight(0xF28B);
+  static const forum = _MaterialDesignIconLight(0xF28C);
+  static const fullscreen = _MaterialDesignIconLight(0xF293);
+  static const fullscreenExit = _MaterialDesignIconLight(0xF294);
+  static const gift = _MaterialDesignIconLight(0xF2A1);
+  static const grid = _MaterialDesignIconLight(0xF2C1);
+  static const gridLarge = _MaterialDesignIconLight(0xF757);
+  static const gridOff = _MaterialDesignIconLight(0xF2C2);
+  static const group = _MaterialDesignIconLight(0xF2C3);
+  static const hamburger = _MaterialDesignIconLight(0xF684);
+  static const heart = _MaterialDesignIconLight(0xF2D1);
+  static const heartHalf = _MaterialDesignIconLight(0xF6DE);
+  static const heartOff = _MaterialDesignIconLight(0xF758);
+  static const help = _MaterialDesignIconLight(0xF2D6);
+  static const helpCircle = _MaterialDesignIconLight(0xF2D7);
+  static const hexagon = _MaterialDesignIconLight(0xF2D8);
+  static const home = _MaterialDesignIconLight(0xF2DC);
+  static const image = _MaterialDesignIconLight(0xF2E9);
+  static const inbox = _MaterialDesignIconLight(0xF686);
+  static const information = _MaterialDesignIconLight(0xF2FC);
+  static const label = _MaterialDesignIconLight(0xF315);
+  static const layers = _MaterialDesignIconLight(0xF328);
+  static const lightbulb = _MaterialDesignIconLight(0xF335);
+  static const lightbulbOn = _MaterialDesignIconLight(0xF6E7);
+  static const link = _MaterialDesignIconLight(0xF337);
+  static const linkVariant = _MaterialDesignIconLight(0xF339);
+  static const lock = _MaterialDesignIconLight(0xF33E);
+  static const lockOpen = _MaterialDesignIconLight(0xF33F);
+  static const login = _MaterialDesignIconLight(0xF342);
+  static const logout = _MaterialDesignIconLight(0xF343);
+  static const magnify = _MaterialDesignIconLight(0xF349);
+  static const magnifyMinus = _MaterialDesignIconLight(0xF34A);
+  static const magnifyPlus = _MaterialDesignIconLight(0xF34B);
+  static const mapMarker = _MaterialDesignIconLight(0xF34E);
+  static const memory = _MaterialDesignIconLight(0xF35B);
+  static const menu = _MaterialDesignIconLight(0xF35C);
+  static const message = _MaterialDesignIconLight(0xF361);
+  static const messageAlert = _MaterialDesignIconLight(0xF362);
+  static const messageImage = _MaterialDesignIconLight(0xF364);
+  static const messageProcessing = _MaterialDesignIconLight(0xF366);
+  static const messageReply = _MaterialDesignIconLight(0xF367);
+  static const messageText = _MaterialDesignIconLight(0xF369);
+  static const messageVideo = _MaterialDesignIconLight(0xF36B);
+  static const microphone = _MaterialDesignIconLight(0xF36C);
+  static const microphoneOff = _MaterialDesignIconLight(0xF36D);
+  static const minus = _MaterialDesignIconLight(0xF374);
+  static const minusBox = _MaterialDesignIconLight(0xF375);
+  static const minusCircle = _MaterialDesignIconLight(0xF376);
+  static const monitor = _MaterialDesignIconLight(0xF379);
+  static const monitorMultiple = _MaterialDesignIconLight(0xF37A);
+  static const music = _MaterialDesignIconLight(0xF759);
+  static const musicOff = _MaterialDesignIconLight(0xF75A);
+  static const nfcVariant = _MaterialDesignIconLight(0xF398);
+  static const note = _MaterialDesignIconLight(0xF39A);
+  static const noteMultiple = _MaterialDesignIconLight(0xF6B7);
+  static const notePlus = _MaterialDesignIconLight(0xF39C);
+  static const noteText = _MaterialDesignIconLight(0xF39E);
+  static const octagon = _MaterialDesignIconLight(0xF3C3);
+  static const paperclip = _MaterialDesignIconLight(0xF3E2);
+  static const pause = _MaterialDesignIconLight(0xF3E4);
+  static const pencil = _MaterialDesignIconLight(0xF3EB);
+  static const phone = _MaterialDesignIconLight(0xF3F2);
+  static const pin = _MaterialDesignIconLight(0xF403);
+  static const pinOff = _MaterialDesignIconLight(0xF404);
+  static const play = _MaterialDesignIconLight(0xF40A);
+  static const plus = _MaterialDesignIconLight(0xF415);
+  static const plusBox = _MaterialDesignIconLight(0xF416);
+  static const plusCircle = _MaterialDesignIconLight(0xF417);
+  static const power = _MaterialDesignIconLight(0xF425);
+  static const presentation = _MaterialDesignIconLight(0xF428);
+  static const presentationPlay = _MaterialDesignIconLight(0xF429);
+  static const printer = _MaterialDesignIconLight(0xF42A);
+  static const redoVariant = _MaterialDesignIconLight(0xF44F);
+  static const refresh = _MaterialDesignIconLight(0xF450);
+  static const repeat = _MaterialDesignIconLight(0xF456);
+  static const repeatOff = _MaterialDesignIconLight(0xF457);
+  static const repeatOnce = _MaterialDesignIconLight(0xF458);
+  static const rewind = _MaterialDesignIconLight(0xF45F);
+  static const rhombus = _MaterialDesignIconLight(0xF70A);
+  static const rss = _MaterialDesignIconLight(0xF46B);
+  static const script = _MaterialDesignIconLight(0xF478);
+  static const settings = _MaterialDesignIconLight(0xF493);
+  static const shield = _MaterialDesignIconLight(0xF498);
+  static const shuffle = _MaterialDesignIconLight(0xF49D);
+  static const signal = _MaterialDesignIconLight(0xF4A2);
+  static const sitemap = _MaterialDesignIconLight(0xF4AA);
+  static const skipNext = _MaterialDesignIconLight(0xF4AD);
+  static const skipPrevious = _MaterialDesignIconLight(0xF4AE);
+  static const sleep = _MaterialDesignIconLight(0xF4B2);
+  static const sleepOff = _MaterialDesignIconLight(0xF4B3);
+  static const spellcheck = _MaterialDesignIconLight(0xF4C6);
+  static const square = _MaterialDesignIconLight(0xF763);
+  static const star = _MaterialDesignIconLight(0xF4CE);
+  static const starHalf = _MaterialDesignIconLight(0xF4D0);
+  static const stop = _MaterialDesignIconLight(0xF4DB);
+  static const tab = _MaterialDesignIconLight(0xF4E9);
+  static const tabPlus = _MaterialDesignIconLight(0xF75B);
+  static const table = _MaterialDesignIconLight(0xF4EB);
+  static const taco = _MaterialDesignIconLight(0xF761);
+  static const tag = _MaterialDesignIconLight(0xF4F9);
+  static const television = _MaterialDesignIconLight(0xF502);
+  static const thumbDown = _MaterialDesignIconLight(0xF511);
+  static const thumbUp = _MaterialDesignIconLight(0xF513);
+  static const thumbsUpDown = _MaterialDesignIconLight(0xF515);
+  static const tooltip = _MaterialDesignIconLight(0xF523);
+  static const tooltipText = _MaterialDesignIconLight(0xF528);
+  static const triangle = _MaterialDesignIconLight(0xF536);
+  static const trophy = _MaterialDesignIconLight(0xF538);
+  static const undoVariant = _MaterialDesignIconLight(0xF54D);
+  static const unfoldLessHorizontal = _MaterialDesignIconLight(0xF54E);
+  static const unfoldLessVertical = _MaterialDesignIconLight(0xF75F);
+  static const unfoldMoreHorizontal = _MaterialDesignIconLight(0xF54F);
+  static const unfoldMoreVertical = _MaterialDesignIconLight(0xF760);
+  static const ungroup = _MaterialDesignIconLight(0xF550);
+  static const upload = _MaterialDesignIconLight(0xF552);
+  static const vectorArrangeAbove = _MaterialDesignIconLight(0xF554);
+  static const vectorArrangeBelow = _MaterialDesignIconLight(0xF555);
+  static const vectorCombine = _MaterialDesignIconLight(0xF558);
+  static const vectorDifference = _MaterialDesignIconLight(0xF55A);
+  static const vectorDifferenceAb = _MaterialDesignIconLight(0xF55B);
+  static const vectorDifferenceBa = _MaterialDesignIconLight(0xF55C);
+  static const vectorIntersection = _MaterialDesignIconLight(0xF55D);
+  static const vectorUnion = _MaterialDesignIconLight(0xF564);
+  static const viewDashboard = _MaterialDesignIconLight(0xF56E);
+  static const viewModule = _MaterialDesignIconLight(0xF573);
+  static const volumeHigh = _MaterialDesignIconLight(0xF57E);
+  static const volumeMinus = _MaterialDesignIconLight(0xF75D);
+  static const volumeMute = _MaterialDesignIconLight(0xF75E);
+  static const volumeOff = _MaterialDesignIconLight(0xF581);
+  static const volumePlus = _MaterialDesignIconLight(0xF75C);
+  static const wifi = _MaterialDesignIconLight(0xF5A9);
+  static const xml = _MaterialDesignIconLight(0xF5C0);
 }
