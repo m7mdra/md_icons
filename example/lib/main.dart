@@ -118,13 +118,14 @@ class _MDICollectionState extends State<MDICollection>
               borderRadius: borderRadius,
               onTap: () {
                 showModalBottomSheet(
-                    isScrollControlled: true,
-                    context: context,
-                    builder: (context) => IconViewerModal(
-                          icon: icon,
-                          name: name,
-                          mdi: true,
-                        ));
+                  isScrollControlled: true,
+                  context: context,
+                  builder: (context) => IconViewerModal(
+                    icon: icon,
+                    name: name,
+                    mdi: true,
+                  ),
+                );
               },
               child: GridTile(
                 header: Text(
