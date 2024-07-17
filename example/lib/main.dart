@@ -2,7 +2,7 @@ import 'package:example/all_mdil_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:mdi/mdi.dart';
-import 'package:mdil/mdil_icons.dart';
+import 'package:mdil/mdil.dart';
 
 import 'all_mdi_icons.dart';
 

@@ -1,7 +1,8 @@
 name: mdil
-description: "A new Flutter package project."
+description: "Material Design-inspired icons"
 version: 0.0.2
 homepage: https://github.com/m7mdra/md_icons
+publish_to: https://pub.dev
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
@@ -15,7 +16,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-
 
 flutter:
   fonts:
