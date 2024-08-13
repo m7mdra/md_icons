@@ -30,9 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  mdi:
+  md_icons:
     path: ../mdi
-  mdil:
+  mdl_icons:
     path: ../mdil
 
 

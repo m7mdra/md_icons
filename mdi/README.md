@@ -17,14 +17,10 @@ A comprehensive collection of Material Design-inspired icons for Flutter applica
 
 Add the following line to your `pubspec.yaml` file:
 
-> Note, icons are accessible only throught github
 
 ```yaml
 dependencies:
-  mdi: any
-    git: 
-      path: https://github.com/m7mdra/md_icons/mdi
-      ref: main
+  md_icons: any
 ```
 # Usage
 ### Import the Package

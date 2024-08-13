@@ -1,8 +1,7 @@
-name: mdil
+name: mdl_icons
 description: "Material Design-inspired icons"
-version: 0.0.2
+version: 1.0.0
 homepage: https://github.com/m7mdra/md_icons
-publish_to: https://pub.dev
 
 environment:
   sdk: '>=3.2.0 <4.0.0'

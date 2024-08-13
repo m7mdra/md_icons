@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mdi/mdi.dart';
+import 'package:md_icons/md_icons.dart';
 
 void main() {
   test('test icon map to codepoint', () {

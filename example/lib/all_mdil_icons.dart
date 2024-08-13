@@ -1,4 +1,4 @@
-import 'package:mdil/mdil.dart';
+import 'package:mdl_icons/mdl_icons.dart';
 
 final mdilIconsNames = [
   "account",

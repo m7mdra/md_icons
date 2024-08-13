@@ -1,7 +1,7 @@
 # MDIL - Material Design Icons Light
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Pub Version](https://img.shields.io/pub/v/md_icons)](https://pub.dev/packages/md_icons)
+[![Pub Version](https://img.shields.io/pub/v/md_icons)](https://pub.dev/packages/mdl_icons)
 
 
 A comprehensive collection of Material Design-inspired icons for Flutter applications, offering a wide range of icons for various use cases.
@@ -21,16 +21,15 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  mdil: any
-    git: 
-      path: https://github.com/m7mdra/md_icons/mdil
-      ref: main
+  mdl_icons: any
+
 ```
+
 # Usage
 ### Import the Package
 
 ```dart
-import 'package:mdil/mdil.dart';
+import 'package:mdl_icons/mdl_icons.dart';
 
 // some where in your code
 

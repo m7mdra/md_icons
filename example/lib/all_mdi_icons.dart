@@ -1,4 +1,4 @@
-import 'package:mdi/mdi.dart';
+import 'package:md_icons/md_icons.dart';
 
 final mdiIconsNames = [
   "abTesting",
